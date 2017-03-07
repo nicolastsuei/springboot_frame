@@ -1,4 +1,4 @@
-package wn.lizzy.springboot.servlet;
+package wn.lizzy.springboot.filter;
 
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;

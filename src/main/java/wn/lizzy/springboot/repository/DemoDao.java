@@ -1,7 +1,6 @@
 package wn.lizzy.springboot.repository;
 
 import javax.annotation.Resource;
-import javax.swing.tree.RowMapper;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

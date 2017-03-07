@@ -1,4 +1,4 @@
-package wn.lizzy.springboot.servlet;
+package wn.lizzy.springboot.config;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

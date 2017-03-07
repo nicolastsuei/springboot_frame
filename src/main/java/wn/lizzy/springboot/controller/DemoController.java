@@ -2,11 +2,14 @@ package wn.lizzy.springboot.controller;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import wn.lizzy.springboot.entity.Demo;
+import wn.lizzy.springboot.enviroment.LizzySetting;
 import wn.lizzy.springboot.service.DemoService;
 
 @RestController
@@ -14,7 +17,10 @@ import wn.lizzy.springboot.service.DemoService;
 public class DemoController {
 	 @Resource
 	 private DemoService demoService;
-	 
+	 @Autowired 
+	 private LizzySetting lizzySetting; 
+	 @Resource
+	 private Environment env;
 	/**
  	返回demo数据:
  *请求地址：http://127.0.0.1:8080/demo/getDemo
@@ -25,6 +31,8 @@ public class DemoController {
 	   Demo demo = new Demo();
 	   demo.setId(222222);
 	   demo.setName("dsdfsdfdssfdfdsssdfs");
+	   System.out.println(env.getProperty("spring.datasource.type"));
+	   System.out.println(lizzySetting.getName() + "---" +lizzySetting.getGender());
 	   return demo;
 	}
 	
